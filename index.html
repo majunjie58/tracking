@@ -286,7 +286,9 @@
         }
         var urlCheck = $(".url-check input").eq(0).val();
         var nameCheck = $(".name-check input").eq(0).val();
-        nameCheck = nameCheck.replace(/ /,"_");
+        do{
+            nameCheck = nameCheck.replace(/ /,"_");
+        }while(/ /.test(nameCheck));
         var weekCheck = $(".week-check button").eq(0).attr("value");
         var sourceCheck = $(".source-check button").eq(0).attr("value");
         var whatCheck = $(".what-check button").eq(0).attr("value");
