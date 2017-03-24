@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Tracking</title>
+    <script src="http://cdn.bootcss.com/jquery/3.2.0/jquery.js"></script>
+    <link href="8816726316a7496bf49f56652fb3d349-dkt-style.min.css" rel="stylesheet">
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+<style type="text/css">
+    .m-breadcrumbs{display:none;}
+    #main-container .container-floor {
+        max-width: none;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    #main-container .container-floor .floor {
+        padding-top: 10px;
+        margin-bottom:0;
+    }
+
+    #main-container .row {
+        margin: 0;
+    }
+
+    #landing-page-jay{
+        margin-top:-10px!important;
+    }
+
+    #landing-page-jay .tracking-container{
+        width: 100%;
+        max-width: 700px;
+        margin:0 auto;
+        height: 500px;
+    }
+
+    #landing-page-jay .tracking-container .title-header{
+        text-align: center;
+        margin:10px 0;
+    }
+
+    #landing-page-jay .tracking-container .form-group{
+        display:table;
+        width:100%;
+    }
+
+    #landing-page-jay .tracking-container .form-group label{
+        width:15%;
+        display:table-cell;
+    }
+
+    #landing-page-jay .tracking-container .form-group .fill-input{
+        cursor: text;
+    }
+
+    #landing-page-jay .tracking-container .blocks{
+        display:none;
+    }
+
+    #landing-page-jay .tracking-container .blocks:first-child{
+        display:block;
+    }
+
+
+</style>
+
+<div id="landing-page-jay">
+    <div class="tracking-container">
+        <div class="title-header">Tracking <span>Code</span></div>
+        <div class="t-container">
+            <div class="block-container">
+                <div class="blocks url-check">
+                    <div class="form-group">
+                        <label class="control-label">
+                            url:
+                        </label>
+                        <input type="text" class="form-control fill-input" placeholder="Please fill your Target URL http://www.decathlon"/>
+                        <div class="form-help">
+                            <div class="caret">
+                            </div>
+                            <div class="text">
+                                Please fill the correct URL.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="blocks week-check">
+                    <div class="form-group">
+                        <label class="control-label">
+                            week:
+                        </label>
+                        <div class="dropdown-lg">
+                            <div class="action">
+                                <div class="dropdown">
+                                    <button type="button" id="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-default dropdown-toggle">
+                                        Choose the week
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a></a>
+                                        </li>
+                                        <li>
+                                            <a></a>
+                                        </li>
+                                        <li>
+                                            <a></a>
+                                        </li>
+                                        <li>
+                                            <a></a>
+                                        </li>
+                                        <li>
+                                            <a></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="blocks source-check">
+                    <div class="form-group">
+                        <label class="control-label">
+                            where:
+                        </label>
+                        <div class="dropdown-lg">
+                            <div class="action">
+                                <div class="dropdown">
+                                    <button type="button" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-default dropdown-toggle">
+                                        Choose where?
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a data-hide="HP">HP</a>
+                                        </li>
+                                        <li>
+                                            <a data-hide="Listpage">Listpage</a>
+                                        </li>
+                                        <li>
+                                            <a data-hide="all">all</a>
+                                        </li>
+                                        <li>
+                                            <a data-hide="other">other</a>
+                                        </li>
+                                        <li>
+                                            <a data-hide="PLV">PLV</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="blocks what-check">
+                    <div class="form-group">
+                        <label class="control-label">
+                            what:
+                        </label>
+                        <div class="dropdown-lg">
+                            <div class="action">
+                                <div class="dropdown">
+                                    <button type="button" id="dropdown2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-default dropdown-toggle">
+                                        Choose what?
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a data-hide="TOP-Banner">TOP-Banner</a>
+                                        </li>
+                                        <li>
+                                            <a data-hide="Spotlight-Banner">Spotlight-Banner</a>
+                                        </li>
+                                        <li>
+                                            <a data-hide="ProductPush">ProductPush</a>
+                                        </li>
+                                        <li>
+                                            <a data-hide="ProductPush">ProductPush</a>
+                                        </li>
+                                        <li>
+                                            <a data-hide="category">category</a>
+                                        </li>
+                                        <li>
+                                            <a data-hide="search">search</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="blocks name-check">
+                    <div class="form-group">
+                        <label class="control-label">
+                            name:
+                        </label>
+                        <input type="text" class="form-control fill-input" placeholder="Please fill the name of OPECO"/>
+                        <div class="form-help">
+                            <div class="caret">
+                            </div>
+                            <div class="text">
+                                Please fill the name of OPECO.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="blocks tracking-url">
+                    <div class="form-group">
+                        <label class="control-label">
+                            tracking url:
+                        </label>
+                        <input type="text" class="form-control"/>
+                        <div class="form-help">
+                            <div class="caret">
+                            </div>
+                            <div class="text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $("#landing-page-jay .source-check .dropdown .dropdown-menu li a").click(function(){
+        var value = $(this).attr("data-hide");
+        $(this).parent().eq(0).parent().eq(0).siblings("button").eq(0).attr("value",value);
+        $("#landing-page-jay .source-check .form-group").addClass("validated");
+        blocksShow();
+    });
+
+    $(".url-check input").keyup(function(){
+        var text = $(".url-check input").val();
+        if(/http(s)?\:\/\/www\.decathlon\.com\.cn\//.test(text)){
+            $(this).parent().eq(0).removeClass("has-error");
+            $(this).parent().eq(0).addClass("validated");
+        }else{
+            $(this).parent().eq(0).removeClass("validated");
+            $(this).parent().eq(0).addClass("has-error");
+        }
+        blocksShow();
+    });
+
+    $(".name-check input").keyup(function(){
+        var text = $(".name-check input").val();
+        if(text!=""){
+            $(this).parent().eq(0).removeClass("has-error");
+            $(this).parent().eq(0).addClass("validated");
+        }else{
+            $(this).parent().eq(0).removeClass("validated");
+            $(this).parent().eq(0).addClass("has-error");
+        }
+        blocksShow();
+    });
+
+    $("#landing-page-jay .week-check .dropdown .dropdown-menu li a").click(function(){
+        $("#landing-page-jay .week-check .form-group").addClass("validated");
+        blocksShow();
+    });
+
+    $("#landing-page-jay .what-check .dropdown .dropdown-menu li a").click(function(){
+        $("#landing-page-jay .what-check .form-group").addClass("validated");
+        blocksShow();
+    });
+
+    function blocksShow(){
+        var a = new Array;
+        for (var i=0;i<$(".blocks").length;i++){
+            if(!$(".blocks .form-group").eq(i).hasClass("validated")){
+                a.push(i);
+            }
+        }
+        var index = a[0];
+        for (var i=0;i<$(".blocks").length;i++){
+            if(i<=index){
+                $(".blocks").eq(i).show();
+            }else{
+                $(".blocks").eq(i).hide();
+            }
+        }
+        var urlCheck = $(".url-check input").eq(0).val();
+        var nameCheck = $(".name-check input").eq(0).val();
+        var weekCheck = $(".week-check button").eq(0).attr("value");
+        var sourceCheck = $(".source-check button").eq(0).attr("value");
+        var whatCheck = $(".what-check button").eq(0).attr("value");
+        var tracking = urlCheck+"?"+"opeco=opeco:"+whatCheck+"-"+sourceCheck+"-"+weekCheck+"-"+nameCheck+"&type=opeco";
+        $(".tracking-url input").eq(0).val(tracking);
+    }
+
+    $(".dropdown button").click(function(){
+        $(this).siblings("ul").show();
+    });
+
+    $(".dropdown ul li a").click(function(){
+        $(this).parent().eq(0).parent().eq(0).siblings("button").eq(0).html($(this).html());
+        $(this).parent().eq(0).parent().eq(0).siblings("button").eq(0).attr("value",$(this).html());
+        $(this).parent().eq(0).parent().eq(0).hide();
+        blocksShow();
+    });
+
+    function week(){
+        var date = new Date;
+        function getYearWeek(date){
+            var date2=new Date(date.getFullYear(), 0, 1);
+            var day1=date.getDay();
+            if(day1==0) day1=7;
+            var day2=date2.getDay();
+            if(day2==0) day2=7;
+            d = Math.round((date.getTime() - date2.getTime()+(day2-day1)*(24*60*60*1000)) / 86400000);
+            return Math.ceil(d /7)-1;
+        }
+        var now = getYearWeek(date);
+        $("#landing-page-jay .week-check .dropdown .dropdown-menu li a").each(function(){
+            $(this).html("w"+now);
+            now++;
+        });
+    }
+
+    week();
+
+
+</script>
+
+
+
