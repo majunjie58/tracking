@@ -294,7 +294,12 @@
         var weekCheck = $(".week-check button").eq(0).attr("value");
         var sourceCheck = $(".source-check button").eq(0).attr("value");
         var whatCheck = $(".what-check button").eq(0).attr("value");
-        var tracking = urlCheck+"?"+"opeco=opeco:"+whatCheck+"-"+sourceCheck+"-"+weekCheck+"-"+nameCheck+"&type=opeco";
+        var tracking = "";
+        if(/\?/.test(urlCheck)){
+            tracking = urlCheck+"&"+"opeco=opeco:"+whatCheck+"-"+sourceCheck+"-"+weekCheck+"-"+nameCheck+"&type=opeco";
+        }else{
+            tracking = urlCheck+"?"+"opeco=opeco:"+whatCheck+"-"+sourceCheck+"-"+weekCheck+"-"+nameCheck+"&type=opeco";
+        }
         $(".tracking-url input").eq(0).val(tracking);
     }
 
